@@ -1,0 +1,49 @@
+Lab 4: Statistical Analysis - Summary Report
+============================================================
+
+1) Concrete strength descriptive statistics:
+------------------------------------------------------------
+  count: 100
+  mean: 35.059999999999995
+  median: 34.2
+  mode: 31.8
+  std: 6.16269323257193
+  var: 37.97878787878786
+  min: 21.8
+  max: 47.1
+  range: 25.3
+  q1: 31.1
+  q3: 39.125
+  iqr: 8.024999999999999
+  skewness: 0.04730769580072309
+  kurtosis: -0.67473630723625
+  Percentiles: {5: 25.715, 25: 31.1, 50: 34.2, 75: 39.125, 95: 45.5}
+
+2) Material group statistics (mean, std):
+------------------------------------------------------------
+  Aluminum: mean=196.63, std=7.63, n=50
+  Composite: mean=299.04, std=10.38, n=50
+  Concrete: mean=36.26, std=2.22, n=50
+  Steel: mean=399.10, std=10.40, n=50
+
+3) Fitted normal distribution for concrete:
+------------------------------------------------------------
+  Fitted mu = 35.06, sigma = 6.16
+  Synthetic sample: mean=33.02, std=5.41
+
+4) Bayes theorem application:
+------------------------------------------------------------
+  Prior (Damage) = 0.050
+  Sensitivity = 0.950, Specificity = 0.900
+  P(Positive) = 0.142
+  Posterior P(Damage|Positive) = 0.333
+
+5) Key findings and engineering implications:
+------------------------------------------------------------
+  - Concrete strength approximately symmetric (low skewness).
+  - Distribution is platykurtic (lighter tails).
+
+Recommendations:
+------------------------------------------------------------
+  - If distribution deviates from normal, prefer median for central tendency in design safety margins.
+  - Bayes result shows that even with a good test, low prior prevalence leads to lower positive predictive value.
