@@ -19,11 +19,19 @@ if not os.path.exists(OUT_DIR):
     os.makedirs(OUT_DIR)
 
 def load_data(file_name):
-    """Load dataset from the same directory as the script. Returns DataFrame or raises error."""
+    """Load dataset by calculating the absolute path, assuming 'datasets' is two levels up 
+       (e.g., in the main project directory)."""
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(script_dir, file_name)
+    
+    parent_dir = os.path.dirname(script_dir)
+    
+    grandparent_dir = os.path.dirname(parent_dir)
+    
+    path = os.path.join(grandparent_dir, 'datasets', file_name)
+    
     if not os.path.exists(path):
-        raise FileNotFoundError(f"Dataset not found: {path}")
+        raise FileNotFoundError(f"Dataset not found at expected path: {path}")
     df = pd.read_csv(path)
     return df
 
@@ -517,9 +525,9 @@ def create_statistical_report(concrete_stats, material_group_stats, fitting_info
 
 def main():
     # Load datasets
-    concrete = load_data('concrete_strength.csv')
-    materials = load_data('material_properties.csv')
-    loads = load_data('structural_loads.csv')
+    concrete = load_data("concrete_strength.csv")
+    materials = load_data("material_properties.csv")
+    loads = load_data("structural_loads.csv")
 
     # Assume concrete strength column name contains 'strength' or 'strength_mpa'
     candidate_cols = [c for c in concrete.columns if 'strength' in c.lower()]
