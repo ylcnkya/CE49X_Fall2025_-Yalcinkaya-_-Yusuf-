@@ -96,7 +96,7 @@ def compute_statistics(df, column):
 
 def main():
     # TODO: Update the file path to point to your soil_test.csv file
-    file_path = 'soil_test.csv'  # Update this path as needed
+    file_path = 'datasets/soil_test.csv'  # Update this path as needed
 
     
     # TODO: Load the dataset using the load_data function
@@ -108,7 +108,6 @@ def main():
     
     # TODO: Compute and display statistics for the 'soil_ph' column
     compute_statistics(df_clean, 'soil_ph')
-
     # TODO: (Optional) Compute statistics for other columns
     # compute_statistics(df_clean, 'nitrogen')
     compute_statistics(df_clean, 'nitrogen')

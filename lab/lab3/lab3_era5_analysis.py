@@ -94,8 +94,9 @@ def plot_visuals(monthly_berlin, monthly_munich, seasonal_berlin, seasonal_munic
 # ---------------------- Main ---------------------- #
 def main():
     print("🔹 Loading data...")
-    berlin = load_data("berlin_era5_wind_20241231_20241231.csv")
-    munich = load_data("munich_era5_wind_20241231_20241231.csv")
+    berlin = load_data("datasets/berlin_era5_wind_20241231_20241231.csv")
+    munich = load_data("datasets/munich_era5_wind_20241231_20241231.csv")
+
     if berlin is None or munich is None:
         return
 
