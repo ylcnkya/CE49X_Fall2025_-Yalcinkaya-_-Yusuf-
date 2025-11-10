@@ -29,7 +29,7 @@ Lab 4: Statistical Analysis - Summary Report
 3) Fitted normal distribution for concrete:
 ------------------------------------------------------------
   Fitted mu = 35.06, sigma = 6.16
-  Synthetic sample: mean=34.61, std=6.09
+  Synthetic sample: mean=34.25, std=6.45
 
 4) Bayes theorem application:
 ------------------------------------------------------------
