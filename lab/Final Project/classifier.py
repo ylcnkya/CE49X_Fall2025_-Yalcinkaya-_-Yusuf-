@@ -12,7 +12,7 @@ from tqdm import tqdm
 # ==========================================
 # 1. Put your JSONL file in the same folder as this script
 INPUT_FILENAME = 'aec_ai_corpus_last_unique.jsonl'  # <--- CHANGE THIS NAME
-OUTPUT_FILENAME = 'classified_articles_final.csv'
+OUTPUT_FILENAME = 'classified_articles_complete.jsonl'
 
 # ==========================================
 # SETUP
